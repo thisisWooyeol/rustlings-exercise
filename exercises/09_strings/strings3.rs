@@ -1,3 +1,5 @@
+#![allow(dead_code)]
+
 fn trim_me(input: &str) -> &str {
     // TODO: Remove whitespace from both ends of a string.
     input.trim()
