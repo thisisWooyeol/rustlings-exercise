@@ -8,7 +8,10 @@
 // to insert any more of the fruits that are already in the basket (Apple,
 // Mango, and Lychee).
 
+#![allow(dead_code)]
+
 use std::collections::HashMap;
+
 
 #[derive(Hash, PartialEq, Eq, Debug)]
 enum Fruit {
@@ -32,6 +35,7 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
         // TODO: Insert new fruits if they are not already present in the
         // basket. Note that you are not allowed to put any type of fruit that's
         // already present!
+        basket.entry(fruit).or_insert(3);
     }
 }
 
